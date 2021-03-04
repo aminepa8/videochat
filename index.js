@@ -1,3 +1,4 @@
+var https = require('https');
 const express = require("express");
 const socket = require("socket.io");
 const app = express();
@@ -8,10 +9,14 @@ var options = {
     requestCert: false,
     rejectUnauthorized: false
 };
+/*
 var server = app.listen(4000,function() {
     console.log("Server is running");
 });
-
+*/
+var server = https.createServer(options, app).listen(4000, function(){
+    console.log("server started at port 4000");
+});
 app.use(express.static("public"));
 
 
