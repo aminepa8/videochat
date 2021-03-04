@@ -1,4 +1,4 @@
-var socket = io.connect("http://localhost:4000");
+var socket = io.connect("https://35.225.119.123:4000");
 
 var divVideoChatLobby = document.getElementById("video-chat-lobby");
 var divVideoChat = document.getElementById("video-chat-room");
