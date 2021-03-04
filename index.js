@@ -2,7 +2,12 @@ const express = require("express");
 const socket = require("socket.io");
 const app = express();
 
-
+var options = {
+    key: fs.readFileSync('certificates/key.pem', 'utf8'),
+    cert: fs.readFileSync('certificates/cert.pem', 'utf8'),
+    requestCert: false,
+    rejectUnauthorized: false
+};
 var server = app.listen(4000,function() {
     console.log("Server is running");
 });
