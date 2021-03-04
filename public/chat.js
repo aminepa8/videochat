@@ -14,6 +14,11 @@ var iceServers = {
     iceServers:[
         {urls : "stun:stun.services.mozilla.com"},
         {urls : "stun:stun1.l.google.com:19302"},
+        {
+            url: 'turn:35.223.204.39:3478',
+            credential: 'xvk98A',
+            username: 'user99'
+        },
     ],
 };
 joinButton.addEventListener("click", function () {
